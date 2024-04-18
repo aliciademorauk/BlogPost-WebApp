@@ -6,15 +6,19 @@
         <%end%>
     </div>
     <%end%>
+    <div>
+        <%=form.label :title%></h2>
+        <%=form.text_field :title%>
+    </div>
+    <div>
+        <%=form.label :body%></h2>
+        <%=form.text_area :body%>
+    </div>
 
-<div>
-    <%=form.label :title%></h2>
-    <%=form.text_field :title%>
-</div>
-<div>
-    <%=form.label :body%></h2>
-    <%=form.text_area :body%>
-</div>
+    <div>
+        <%=form.label :published_at%>
+        <%=form.datetime_select :published_at, include_blank: true%>
+    </div>
 
-<%=form.button%>
+    <%=form.button%>
 <%end%>
