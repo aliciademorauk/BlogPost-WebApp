@@ -12,17 +12,16 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
     <% if user_signed_in? %>
-      <div class="flex justify-end p-4 bg-slate-300 text-white">
+      <div class="sticky top-0 flex justify-end p-4 bg-slate-300 text-white">
           <%= link_to "Add New Blog Post", new_blog_post_path, class: "bg-green-500 hover:bg-green-600 px-4 py-2 rounded" %>
           <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "bg-red-500 hover:bg-red-600 px-4 py-2 rounded ml-4" %>
       </div>
     <% end %>
 
     <div class="prose mx-auto my-16">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
   </body>
