@@ -1,4 +1,4 @@
-<h1>A Londoner's Blog</h1>
+<h1><%= user_signed_in? ? "Home" : "A Londoner's Blog" %></h1>
 
 <%@blog_posts.each do |blog_post|%>
     <div>

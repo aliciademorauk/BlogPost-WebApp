@@ -9,9 +9,10 @@
 
   <% if blog_post.cover_image.present? %>
     <div id="<%= dom_id(blog_post, :cover_image) %>">
-      <%= form.label :cover_image %>
-      <%= image_tag blog_post.cover_image, class: "w-1/3" %>
-      <%= link_to "Delete Cover Image", blog_post_cover_image_path(blog_post), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+        <div class="flex justify-end italic underline">
+            <%= link_to "Delete Cover Image", blog_post_cover_image_path(blog_post), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+        </div>
+        <%= image_tag blog_post.cover_image, class: "w-1/3 border-2 rounded-md" %>
     </div>
   <% end %>
 
