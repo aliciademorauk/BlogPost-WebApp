@@ -1,7 +1,8 @@
-<%#<h1>Edit<%= @blog_post.title</h1>%>
+<h1>Edit <%= @blog_post.title %></h1>
 
-<h1>Edit Blog Post</h1>
+<%= render partial: "form", locals: { blog_post: @blog_post } %>
 
-<%=render partial: "form", locals: {blog_post: @blog_post}%>
+<div class="flex justify-end mt-24">
+  <%= button_to "Delete Blog Post", blog_post_path(@blog_post), method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "italic underline" %>
+</div>
 
-<%=button_to "Delete", blog_post_path(@blog_post), method: :delete, data: {turbo_confirm: "Are you sure?"}%>
