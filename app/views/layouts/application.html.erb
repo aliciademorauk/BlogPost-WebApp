@@ -13,11 +13,17 @@
 
   <body>
     <% if user_signed_in? %>
-      <div class="sticky top-0 flex justify-end p-4 bg-slate-300 text-white">
-          <%= link_to "Add New Blog Post", new_blog_post_path, class: "bg-green-500 hover:bg-green-600 px-4 py-2 rounded" %>
-          <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "bg-red-500 hover:bg-red-600 px-4 py-2 rounded ml-4" %>
+      <div class="sticky top-0 flex justify-between p-4 bg-slate-300 text-white">
+          <div class="flex items-center space-x-4">
+              <%= link_to "Home", blog_posts_path, class: "bg-slate-400 hover:bg-slate-500 p-2 rounded" %>
+              <%= link_to "Add New Blog Post", new_blog_post_path, class: "bg-slate-400 hover:bg-slate-500 p-2 rounded" %>
+          </div>
+          <div>
+              <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "bg-slate-400 hover:bg-slate-500 p-2 rounded" %>
+          </div>
       </div>
     <% end %>
+
 
     <div class="prose mx-auto my-16">
       <p class="notice"><%= notice %></p>
