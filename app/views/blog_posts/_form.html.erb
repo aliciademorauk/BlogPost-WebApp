@@ -14,20 +14,26 @@
                 <%= link_to "Delete Cover Image", blog_post_cover_image_path(blog_post), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
             </div>
         <% end %>
-        <%= form.file_field :cover_image %>
+    <div class="mb-4">
+        <%= form.label :cover_image, "Choose Cover Image", class: "block font-semibold capitalize text-gray-500 bg-gray-200 px-4 py-2 rounded-md hover:bg-gray-300 cursor-pointer" %>
+        <%= form.file_field :cover_image, class: "capitalize text-gray-500 hidden" %>
     </div>
-    <div>
-        <%= form.label :title %>
-        <%= form.text_field :title %>
     </div>
-    <div>
-        <%= form.label :content %>
-        <%= form.rich_text_area :content %>
+    <div class="mb-4">
+        <%= form.label :title, class: "block font-semibold capitalize" %>
+        <%= form.text_field :title, class: "block w-full py-2 px-3 border rounded-md" %>
     </div>
-    <div>
-        <%= form.label :published_at %>
+
+    <div class="mb-4">
+        <%= form.label :content, class: "block font-semibold capitalize" %>
+        <%= form.rich_text_area :content, class: "block w-full p-4 border rounded-md" %>
+    </div>
+
+    <div class="mb-4">
+        <%= form.label :published_at, class: "block font-semibold capitalize" %>
         <%= form.datetime_select :published_at, include_blank: true %>
     </div>
 
-    <%= form.button %>
+    <%= form.submit "Save Changes", class: "bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded capitalize" %>
+    <%= button_to "Delete Blog Post", blog_post_path(blog_post), method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded capitalize ml-4" %>
 <% end %>
