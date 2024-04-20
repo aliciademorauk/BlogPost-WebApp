@@ -10,7 +10,7 @@
     &:hover {
       @apply bg-gray-300;
     }
-    &:not([href]) { /* disabled links */
+    &:not([href]) {
       @apply text-gray-300 bg-gray-100 cursor-default;
     }
     &.current {
