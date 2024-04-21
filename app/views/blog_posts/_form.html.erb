@@ -6,7 +6,7 @@
       <% end %>
     </div>
   <% end %>
-
+  <hr />
   <% if blog_post.cover_image.present? %>
     <div id="<%= dom_id(blog_post, :cover_image) %>">
         <div class="flex justify-end italic underline">
@@ -17,8 +17,8 @@
   <% end %>
 
   <div class="mb-6">
-    <%= form.label :cover_image, "Choose Cover Image", class: "block font-semibold text-gray-500 bg-gray-200 px-4 py-2 rounded-md hover:bg-gray-300 cursor-pointer" %>
-    <%= form.file_field :cover_image, class: "hidden" %>
+    <%= form.label :cover_image, "Cover Image", class: "block font-semibold" %>
+    <%= form.file_field :cover_image, class: "capitalize-text"%>
   </div>
 
   <div class="mb-6">
@@ -39,5 +39,5 @@
   <div id="form-submit">
     <%= form.submit "Save Changes", class: "bg-green-500 hover:bg-green-600 text-white p-2 rounded" %>
   </div>
-  
+
 <% end %>
