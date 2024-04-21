@@ -1,4 +1,10 @@
-<h1><%= user_signed_in? ? "Home" : "A Londoner's Blog" %></h1>
+<% if user_signed_in? %>
+  <h1>Home</h1>
+  <p class="italic">Your blog posts are displayed in the following order: <br>DRAFT > SCHEDULED > PUBLISHED.</p>
+<% else %>
+  <h1>A Londoner's Blog</h1>
+<% end %>
+
 <hr />
 <% @blog_posts.each do |blog_post| %>
     <div>
