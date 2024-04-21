@@ -11,6 +11,10 @@ user.update!(
 blog_posts_data = JSON.parse(File.read(Rails.root.join('db', 'seed_posts.json')))
 
 blog_posts_data.each_with_index do |data, i|
+    published_at_value = data['published_at'].present? ? DateTime.parse(data['published_at']) : nil
     blog_post = BlogPost.where(title: data['title']).first_or_initialize
-    blog_post.update!(content: data['content'], published_at: Time.current)
-end  
+    blog_post.update!(
+        content: data['content'], 
+        published_at: published_at_value
+    )
+end
