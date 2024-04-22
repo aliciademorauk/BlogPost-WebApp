@@ -5,7 +5,6 @@
   <h1 align="center">Blog Web Application</h1>
 
   <p align="center">
-    <br />
      ·
     <!-- LINK TO SECTION ON THE PAGE WITH SCREENSHOTS OF HOW IT WORKS -->
     <a href="#how-it-works">Show Me How To Use It!</a>
