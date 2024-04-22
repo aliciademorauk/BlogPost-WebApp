@@ -6,7 +6,7 @@ require 'securerandom'
 
 random_password = SecureRandom.hex(8)
 # Add your email address below:
-email = "aliciademoralosana@yahoo.com"
+email = "example@yahoo.com"
 
 user = User.where(email: email).first_or_initialize
 user.update!(
