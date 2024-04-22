@@ -38,11 +38,18 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
 ### Functionality
-* Web application that allows users to...
+
+* Simple web application designed for a single user (for now) to create blogposts using a rich text editor. The user can set the `Published at` fields in the dropdown to define whether a blogpost will be published (i.e. already visible to other users), whether it will be scheduled to be published at a later date, or whether it will be saved as a draft.
+* The Sign In page can only be accessed with the URL, given it should be used only by the administrator of the blog. The administrator can edit their email address and password.
 
 ### Architecture
-* The project is currently hosted in...
+* This is a Ruby on Rails web application with a PostGreSQL database. It uses TailwindCSS for styling. The storage of cover images is handled as follows:
+  
+  * This application uses Active Storage to store cover images (i.e. saved to local disk) in development.
+    
+  * This application is configured to use an Amazon S3 Object Storage bucket in production. The setting up of this bucket won't be covered here, but this is the link [INSERT LINK] to the app running in production using an Amazon S3 bucket (so you can see it works!). You can therefore change `config.active_storage.service = :amazon` to `config.active_storage.service = :local` in `production.rb`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,13 +68,6 @@
 ## Getting Started
 
 To get a local copy up and running follow these steps:
-
-* Clone this repository by running git clone https://github.com/Kingjosh007/rails-blog-app in your command line.
-
-* Navigate to the repository by running cd rails-blog-app.
-
-* Run bundle install to install all the gems.
-
 
 ### Prerequisites
 
@@ -89,9 +89,11 @@ To get a local copy up and running follow these steps:
 ### Execution
 
   *  Run rake `db:create:all` and `rake db:migrate`
+
+  *  Specify the `username` and `password` that you, as the administrator, want to use to sign in in the `seeds.JSON` file.
     
-  *  Run `rake db:seed` to populate the database with sample data (found in `seeds.JSON`).
-    
+  *  Run `rake db:seed` to populate the database with data found in `seeds.JSON`. This will populate the blog with some sample posts (which you can modify in `seeds.JSON`) and will set you up as a user with your chosen username and password.
+ 
   *  Run `bin/dev` to start the Rails server and the TailwinCSS watcher files as specified in `Procfile.dev`.
     
   *  In your browser, go to `http://localhost:3000` to experience the site as a non-logged in user (i.e. read-only) or sign in at `http://localhost:3000/users/sign_in` to add and edit blog posts.
