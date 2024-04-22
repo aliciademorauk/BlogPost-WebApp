@@ -1,11 +1,6 @@
 # README
 
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
-<!--   <a href="https://github.com/aliciademorauk/OnlineQuizApp/blob/main/Client/online-quiz-app/img/question-mark.png">
-    <img src="https://github.com/aliciademorauk/OnlineQuizApp/raw/main/Client/online-quiz-app/img/question-mark.png" alt="Logo" width="80" height="80">
-  </a> -->
 
   <h3 align="center">Blog Web Application</h3>
 
@@ -65,34 +60,41 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these steps:
+
+* Clone this repository by running git clone https://github.com/Kingjosh007/rails-blog-app in your command line.
+
+* Navigate to the repository by running cd rails-blog-app.
+
+* Run bundle install to install all the gems.
 
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+  * Make sure you have Ruby installed in your system using `ruby -v` on the command line. Otherwise, install it [here](https://www.ruby-lang.org/en/documentation/installation/).
+
+  * Make sure you have Rails installed in your system using `rails -v` on the command line. Get started with [Ruby on Rails](https://guides.rubyonrails.org/getting_started.html).
+
+  * XXX DATABASE INFO
 
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+  * Clone this repository by running `git clone https://github.com/aliciademorauk/BlogPost-WebApp` in your command line.
+
+  * Navigate to the repository by running `cd BlogPost-WebApp`.
+    
+  * Run `bundle install` to install all the gems.
+
+### Execution
+
+  *  Run rake `db:create:all` and `rake db:migrate`
+    
+  *  Run `rake db:seed` to populate the database with sample data (found in `seeds.JSON`).
+    
+  *  Run `bin/dev` to start the Rails server and the TailwinCSS watcher files as specified in `Procfile.dev`.
+    
+  *  In your browser, go to `http://localhost:3000` to experience the site as a non-logged in user (i.e. read-only) or sign in at `http://localhost:3000/users/sign_in` to add and edit blog posts.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
