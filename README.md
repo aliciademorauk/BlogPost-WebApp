@@ -52,7 +52,7 @@
   * scheduled to be published at a later date, or
   * saved as a draft.
   
-* The `Sign In page` can only be accessed with the URL, given it should only be acessible by the administrator of the blog. The administrator can edit their email address and password.
+* The `Sign In` page can only be accessed with the URL, given it should only be acessible by the administrator of the blog. The administrator can edit their email address and password.
 
 ### Architecture
 
