@@ -92,7 +92,7 @@ To get a local copy up and running follow these steps:
 
   *  Specify the `username` and `password` that you, as the administrator, want to use to sign in in the `seeds.JSON` file.
     
-  *  Run `rake db:seed` to populate the database with data found in `seeds.JSON`. This will populate the blog with some sample posts (which you can modify in `seeds.JSON`) and will set you up as a user with your chosen username and password.
+  *  Run `rake db:seed` to populate the database with data found in `seed_posts.JSON`. This will populate the blog with some sample posts (which you can modify in `seed_posts.JSON`) and will set you up as a user with your chosen username and password.
  
   *  Run `bin/dev` to start the Rails server and the TailwinCSS watcher files as specified in `Procfile.dev`.
     
