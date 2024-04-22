@@ -21,6 +21,8 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#functionality">Functionality</a></li>
+        <li><a href="#architecture">Architecture</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -29,10 +31,11 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#execution">Execution</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
