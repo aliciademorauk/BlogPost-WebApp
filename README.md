@@ -41,15 +41,17 @@
 
 ### Functionality
 
-* Simple web application designed for a single user (for now) to create blogposts using a rich text editor. The user can set the `Published at` fields in the dropdown to define whether a blogpost will be published (i.e. already visible to other users), whether it will be scheduled to be published at a later date, or whether it will be saved as a draft.
+* Simple web application designed for a single user (for now) to create blogposts using a rich text editor.
+* The user can set the `Published at` dropdown fields when creating a blog post to define whether it will be published (i.e. already visible to other users), whether it will be scheduled to be published at a later date, or whether it will be saved as a draft. The user can also add a cover image to blog posts.
 * The Sign In page can only be accessed with the URL, given it should be used only by the administrator of the blog. The administrator can edit their email address and password.
 
 ### Architecture
+
 * This is a Ruby on Rails web application with a PostGreSQL database. It uses TailwindCSS for styling. The storage of cover images is handled as follows:
   
-  * This application uses Active Storage to store cover images (i.e. saved to local disk) in development.
+  * Active Storage to store cover images (i.e. saved to local disk) in development.
     
-  * This application is configured to use an Amazon S3 Object Storage bucket in production. The setting up of this bucket won't be covered here, but this is the link [INSERT LINK] to the app running in production using an Amazon S3 bucket (so you can see it works!). You can therefore change `config.active_storage.service = :amazon` to `config.active_storage.service = :local` in `production.rb`.
+  * An Amazon S3 Object Storage bucket in production. The setting up of this bucket won't be covered here, but this is the link [INSERT LINK] to the app running in production using an Amazon S3 bucket (so you can see it works!). You can therefore change `config.active_storage.service = :amazon` to `:local` in `production.rb`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,6 +99,8 @@ To get a local copy up and running follow these steps:
   *  Run `bin/dev` to start the Rails server and the TailwinCSS watcher as specified in `Procfile.dev`.
     
   *  In your browser, go to `http://localhost:3000` to experience the site as a non-logged in user (i.e. read-only) or sign in at `http://localhost:3000/users/sign_in` to add and edit blog posts.
+
+  *  To reset the application data back to the initial seeds ... [FINISH]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
