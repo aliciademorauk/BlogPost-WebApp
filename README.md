@@ -63,11 +63,10 @@
 
 ### Built With
 
-| Database      | Backend        | Frontend     |
-| ------------- |:--------------:|:---------:   |
-| ![PostGreSQL] |   ![Ruby]      |![TailwindCSS]|
-|               |![Ruby on Rails]|              |
-|               |                |              |
+* ![PostGreSQL]
+* ![Ruby]
+* ![Ruby on Rails]
+* ![TailwindCSS]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
