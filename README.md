@@ -3,9 +3,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/aliciademorauk/OnlineQuizApp/blob/main/Client/online-quiz-app/img/question-mark.png">
+<!--   <a href="https://github.com/aliciademorauk/OnlineQuizApp/blob/main/Client/online-quiz-app/img/question-mark.png">
     <img src="https://github.com/aliciademorauk/OnlineQuizApp/raw/main/Client/online-quiz-app/img/question-mark.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
   <h3 align="center">Blog Web Application</h3>
 
@@ -44,10 +44,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 ### Functionality
-* Full stack web application that allows users to submit multiple choice questions with single or multiple correct answers. Questions are mapped to a specific subject. The user can then generate a quiz on any subject for which a bank of questions has been added by specifying the subject and the number of questions.
+* Web application that allows users to...
 
 ### Architecture
-* The project is currently hosted in a monorepo, where the Server and Client directories separate backend and frontend logic, respectively. The database layer uses **PostGreSQL**, the backend layer is a **SpringBoot RestFUL API** service which is consumed by the frontend, in turn a **React** application styled with **Bootstrap**.
+* The project is currently hosted in...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,9 +99,9 @@ This is an example of how to list things you need to use the software and how to
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Implement user registration and login with user authentication through JWTs (WIP)
-- [ ] Use OpenAI's Chat Completions API for user to leverage text generation models to create questions more easily
-- [ ] Create React error handling layer
+- [ ] Implement Devise invitable to allow users by invitation only to collaborate on the blog
+- [ ] Implement 'Forgot your password?' (Devise mailer) 
+- [ ] Use OpenAI's Chat Completions API for user to leverage text generation model to get help writing blog post
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
