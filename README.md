@@ -1,8 +1,10 @@
-<em>:warning: All of my projects are a work in progress! They are experiments I am trying to improve and are not a final version (and probably will never be!).</em>
+:warning: <em> All of my projects are a WIP! They are experiments and are not a final version (and probably will never be!). </em>
 
 <div align="center">
 
-  <h1 align="center">Blog Web Application</h1>
+<br />
+
+  <h3 align="center">Blog Web Application</h3>
 
   <p align="center">
      ·
@@ -36,11 +38,12 @@
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
   </ol>
 </details>
 
+<br />
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -63,8 +66,6 @@
   * Active Storage to store cover images (i.e. saved to local disk) in development.
     
   * An Amazon S3 Object Storage bucket in production. The setting up of this bucket won't be covered here, but this is the link [INSERT LINK] to the app running in production using an Amazon S3 bucket (so you can see it works!). To revert production storage to Active Storage you can then change `config.active_storage.service = :amazon` to `:local` in `production.rb`.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
@@ -133,7 +134,6 @@ To get a local copy up and running follow these steps:
 
 
 ## How It Works
-
 <p><a href="https://blogpost-webapp.onrender.com"> Click here to see the demo in production (as a non-signed in user)! </a></p>
 
 1. The administrator goes to the `Sign In` page.
