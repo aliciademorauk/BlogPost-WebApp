@@ -80,21 +80,23 @@ To get a local copy up and running follow these steps:
 
 ### Installation
 
-  * Clone this repository by running `git clone https://github.com/aliciademorauk/BlogPost-WebApp` in your command line.
+  * Clone this repository: `git clone https://github.com/aliciademorauk/BlogPost-WebApp`.
 
-  * Navigate to the repository by running `cd BlogPost-WebApp`.
+  * Navigate to the repository: `cd BlogPost-WebApp`.
     
-  * Run `bundle install` to install all the gems.
+  * Run `bundle install` to install all the Ruby gems.
 
 ### Execution
 
-  *  Run rake `db:create:all` and `rake db:migrate`
-
-  *  Specify the `username` and `password` that you, as the administrator, want to use to sign in in the `seeds.JSON` file.
+  *  Run rake `db:create:all` and `rake db:migrate`.
     
-  *  Run `rake db:seed` to populate the database with data found in `seed_posts.JSON`. This will populate the blog with some sample posts (which you can modify in `seed_posts.JSON`) and will set you up as a user with your chosen username and password.
+  *  Random password generated for user 'aliciademoralosana@yahoo.com': e5f45ae7278026f5
+
+  *  Specify the `email` that you, as the administrator, will use to sign in. To do this, go to `seeds.rb` file and write your email next to `email=`.
+    
+  *  Run `rake db:seed` to populate the database with data found in `seed_posts.JSON`. This will do two things: populate the blog with some sample posts (which you can modify in `seed_posts.JSON`) and set you up as a user. Note that **a password will be automatically generated for you** and printed to the console. You can use this to sign in the first time and modify your password in `Edit Profile`.
  
-  *  Run `bin/dev` to start the Rails server and the TailwinCSS watcher files as specified in `Procfile.dev`.
+  *  Run `bin/dev` to start the Rails server and the TailwinCSS watcher as specified in `Procfile.dev`.
     
   *  In your browser, go to `http://localhost:3000` to experience the site as a non-logged in user (i.e. read-only) or sign in at `http://localhost:3000/users/sign_in` to add and edit blog posts.
 
