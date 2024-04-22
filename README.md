@@ -89,8 +89,6 @@ To get a local copy up and running follow these steps:
 ### Execution
 
   *  Run rake `db:create:all` and `rake db:migrate`.
-    
-  *  Random password generated for user 'aliciademoralosana@yahoo.com': e5f45ae7278026f5
 
   *  Specify the `email` that you, as the administrator, will use to sign in. To do this, go to `seeds.rb` file and write your email next to `email=`.
     
