@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h2 align="center">Blog Web Application</h2>
+  <h1 align="center">Blog Web Application</h1>
 
   <p align="center">
     <br />
