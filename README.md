@@ -8,7 +8,9 @@
     <br />
      ·
     <!-- LINK TO SECTION ON THE PAGE WITH SCREENSHOTS OF HOW IT WORKS -->
-    <a href="#how-it-works">Show me how it works!</a>
+    <a href="#how-it-works">Show Me How To Use It!</a>
+    ·
+    <a href="https://blogpost-webapp.onrender.com">Live Demo!</a>
     ·
   </p>
   
@@ -135,12 +137,12 @@ To get a local copy up and running follow these steps:
 
 <p><a href="https://blogpost-webapp.onrender.com"> Click here to see the demo in production (as a non-signed in user)! </a></p>
 
-1. The administrator goes to the Sign In page.
-   <br />
-   <img width="500" alt="Screenshot 2024-04-22 at 21 12 40" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/1bc34c61-0072-4ed1-ae87-7b26f9541c9f">
+1. The administrator goes to the `Sign In` page.
+  <br />
+  <img width="500" alt="Screenshot 2024-04-22 at 21 12 40" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/1bc34c61-0072-4ed1-ae87-7b26f9541c9f">
   
 2. After signing in, draft and scheduled posts come first in the home page.
-   <br />
+  <br />
   <img width="500" alt="Screenshot 2024-04-22 at 21 04 32" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/e84ba3d1-026a-4978-b273-a41221121885">
   <img width="500" alt="Screenshot 2024-04-22 at 20 33 53" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/b6da562f-b3ae-42c4-8e08-97f27f5438ee">
   
