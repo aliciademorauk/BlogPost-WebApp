@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3 align="center">Blog Web Application</h3>
+  <h2 align="center">Blog Web Application</h2>
 
   <p align="center">
     <br />
@@ -147,12 +147,12 @@ To get a local copy up and running follow these steps:
   <img width="500" alt="Screenshot 2024-04-22 at 20 33 53" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/b6da562f-b3ae-42c4-8e08-97f27f5438ee">
   
 3. The administrator can click on a blog post to edit it or add a new blog post with the button on the navigation bar, both of which open the rich text editor.
-   <br />
+  <br />
   <img width="500" alt="Screenshot 2024-04-22 at 20 33 26" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/cac89325-5b43-4242-8da5-c8d0d1328205">
   <img width="500" alt="Screenshot 2024-04-22 at 20 28 43" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/730d4886-0533-47b0-92ae-9d00e43e26a9">
    
 4. The user can modify email and password details.
-   <br />
+  <br />
   <img width="500" alt="Screenshot 2024-04-22 at 20 34 10" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/0f9c9500-35a3-4c71-8bda-181000c7ca14">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
