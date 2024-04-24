@@ -1,3 +1,12 @@
 <h1>Add New Blog Post</h1>
 
-<%=render partial: "form", locals: {blog_post: @blog_post}%>
+<p class="italic">Not sure what to write about yet? Write a title idea below and let <strong>AI</strong> get you started:</p>
+
+<%= form_tag suggest_content_path, method: :post, remote: true do %>
+  <%= text_field_tag :title, params[:title], class: "block w-full p-4 border rounded-md" %>
+  <%= submit_tag "Surprise me!", class: "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white p-2 rounded-md mt-4", id: "suggest-content-btn" %>
+<% end %>
+
+<%= render partial: "open_ai/suggest_content", locals: { response_content: @response_content } %>
+
+<%= render partial: "form", locals: { blog_post: @blog_post } %>

@@ -70,3 +70,4 @@ gem "devise", "~> 4.9"
 gem "tailwindcss-rails", "~> 2.4"
 gem "aws-sdk-s3", require: false
 gem "pagy", "~> 8.2"
+gem "ruby-openai", "~> 6.5"

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     put 'users' => 'devise/registrations#update', :as => 'user_registration'
   end
 
+  post 'suggest_content', to: 'open_ai#suggest_content'
+
   resources :blog_posts do 
     resource :cover_image, only: [:destroy], module: :blog_posts
   end

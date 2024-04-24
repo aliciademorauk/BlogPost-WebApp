@@ -1,0 +1,10 @@
+<turbo-frame id="suggestion">
+  <h3>Suggestion:</h3>
+  <div class="mt-4">
+    <%= text_area_tag :modified_content, @response_content, class: "block w-full p-4 border rounded-md", rows: 10 %>
+  </div>
+</turbo-frame>
+
+<%= turbo_stream_from "suggestion" %>
+
+
