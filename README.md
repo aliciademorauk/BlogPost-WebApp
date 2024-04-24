@@ -115,9 +115,7 @@
     
   *  In your browser, go to `http://localhost:3000` to experience the site as a non-logged in user (i.e. read-only) or sign in at `http://localhost:3000/users/sign_in` to add and edit blog posts.
 
-  *  To reset the application data back to the seed data, stop the program, open the rails console with `rails c` and execute the following prior to re-running the application:
-    *  User.destroy_all
-    *  BlogPost.destroy_all
+  *  To reset the application data back to the seed data, stop the program, open the rails console with `rails c` and execute the following prior to re-running the application: `User.destroy_all` and `BlogPost.destroy_all`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
