@@ -31,7 +31,7 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#running-the-app">Execution</a></li>
+        <li><a href="#running-the-app">Running The App</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
