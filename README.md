@@ -23,7 +23,6 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#functionality">Functionality</a></li>
-        <li><a href="#architecture">Architecture</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -61,15 +60,15 @@
 * The `Sign In` page can only be accessed with the URL, given it should only be acessible by the administrator of the blog.
 * The administrator can edit their email address and password once signed in.
 
-### Architecture
+### Built With
 
 * This is a **Ruby on Rails** web application with a **PostGreSQL** database. It uses **TailwindCSS** for styling. The storage of cover images is handled as follows:
   
   * Active Storage (i.e. saved to local disk) in development.
     
-  * An **Amazon S3** Object Storage bucket in production. The setting up of this bucket or the database for production won't be covered here. You can find a live demo at the bottom of the page. To revert production storage to Active Storage you can then change `config.active_storage.service = :amazon` to `:local` in `production.rb`.
+  * An **Amazon S3** Object Storage bucket in production. The setting up of this bucket or the database for production won't be covered here. You can find a live demo of the app using Amazon's storage service at the bottom of the page (and you can change `config.active_storage.service = :amazon` to `:local` in `production.rb` if you clone this).
 
-### Built With
+  <br />
 
 * ![PostGreSQL]
 * ![AWS]
@@ -82,8 +81,6 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these steps:
-
 ### Prerequisites
 
   * Make sure you have the following installed:
@@ -91,7 +88,7 @@ To get a local copy up and running follow these steps:
     * Ruby on Rails, check with `rails -v` on the command line. Get started with [Ruby on Rails](https://guides.rubyonrails.org/getting_started.html).
     * PostGreSQL, check with `postgresql -v` on the command line. Otherwise, follow instructions according to your operating system.
    
-  * If you plan on using the AI feature, you will need to generate an [OpenAI API key](https://platform.openai.com/api-keys) and keep itsomewhere safe (such as in a newly created `config/credentials.yml.enc`).
+  * If you plan on using the AI feature, you will need to generate an [OpenAI API key](https://platform.openai.com/api-keys).
 
 
 ### Installation
@@ -101,6 +98,8 @@ To get a local copy up and running follow these steps:
   * Navigate to the repository: `cd BlogPost-WebApp`.
     
   * Run `bundle install` to install all the Ruby gems.
+    
+  * Remove config/master.key and config/credentials.yml.enc. Run `EDITOR=vim rails credentials:edit` in the terminal to create a new `master.key` and `credentials.yml.enc`. Use this file to store API keys.
     
   * Go to `seeds.rb` file and write your email next to `email=` to specify the email that you, as the administrator, will use to sign into the blog app.
     
@@ -164,6 +163,16 @@ To get a local copy up and running follow these steps:
   <br />
 
 4. (DEVELOPMENT) If the user is creating a new blog post, the user can write down a prompt which will be sent to OpenAI's Chat API and a 250 word blog post based on that prompt, written in a playful tone of voice, will be returned.
+  <br />
+   <img width="500" alt="Screenshot 2024-04-24 at 17 47 46" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/b3ea87b5-5e18-46c6-b73f-105c6cb6ed78">
+   <img width="500" alt="Screenshot 2024-04-24 at 17 48 40" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/33cd81eb-4dde-4b05-9b5f-66438b368bac">
+  <br />
+
+5.  (DEVELOPMENT) The user can regenerate the OpenAI's response and the contents written in the blog post's text editor won't be lost.
+  <br />
+   <img width="500" alt="Screenshot 2024-04-24 at 17 49 13" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/b19e8ea4-b794-4e57-838d-deee619ba4a0">
+   <img width="500" alt="Screenshot 2024-04-24 at 17 49 37" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/d6cbcfc1-4e93-4995-a65e-3d6bb111e308"> 
+  <br />
    
    
 6. The user can modify email and password details.
