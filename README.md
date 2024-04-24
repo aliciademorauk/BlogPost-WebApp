@@ -32,7 +32,7 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#execution">Execution</a></li>
+        <li><a href="#running-the-app">Execution</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -48,20 +48,24 @@
 
 ### Functionality
 
-* Simple web application designed for a single user (for now) to create blogposts using a rich text editor (Action Text) and add cover images.
+* Simple (but intelligent) web application to publish blog posts. Some features:
+  * a rich text editor (**Action Text**),
+  * an interaction area with **OpenAI Chat API** for the user to get suggested content when creating a new blog post (but this hasn't been pushed to production yet!).
   
-* The user can set the `Published at` dropdown fields when creating a blog post to define whether it will be
+* The user can set `Published at` dropdown fields when creating a blog post to define whether it will be
   * published (i.e. already visible to other users),
   * scheduled to be published at a later date, or
   * saved as a draft.
   
-* The `Sign In` page can only be accessed with the URL, given it should only be acessible by the administrator of the blog. The administrator can edit their email address and password once signed in.
+* The user(s) or blog administrator is defined at the time of application start up (more on that in "Getting Started").
+* The `Sign In` page can only be accessed with the URL, given it should only be acessible by the administrator of the blog.
+* The administrator can edit their email address and password once signed in.
 
 ### Architecture
 
 * This is a **Ruby on Rails** web application with a **PostGreSQL** database. It uses **TailwindCSS** for styling. The storage of cover images is handled as follows:
   
-  * Active Storage to store cover images (i.e. saved to local disk) in development.
+  * Active Storage (i.e. saved to local disk) in development.
     
   * An **Amazon S3** Object Storage bucket in production. The setting up of this bucket or the database for production won't be covered here. You can find a live demo at the bottom of the page. To revert production storage to Active Storage you can then change `config.active_storage.service = :amazon` to `:local` in `production.rb`.
 
@@ -86,6 +90,8 @@ To get a local copy up and running follow these steps:
     * Ruby, check with `ruby -v` on the command line. Otherwise, install it [here](https://www.ruby-lang.org/en/documentation/installation/).
     * Ruby on Rails, check with `rails -v` on the command line. Get started with [Ruby on Rails](https://guides.rubyonrails.org/getting_started.html).
     * PostGreSQL, check with `postgresql -v` on the command line. Otherwise, follow instructions according to your operating system.
+   
+  * If you plan on using the AI feature, you will need to generate an [OpenAI API key](https://platform.openai.com/api-keys) and keep itsomewhere safe (such as in a newly created `config/credentials.yml.enc`).
 
 
 ### Installation
@@ -95,15 +101,16 @@ To get a local copy up and running follow these steps:
   * Navigate to the repository: `cd BlogPost-WebApp`.
     
   * Run `bundle install` to install all the Ruby gems.
+    
+  * Go to `seeds.rb` file and write your email next to `email=` to specify the email that you, as the administrator, will use to sign into the blog app.
+    
 
-### Execution
-
-  *  Run rake `db:create:all` and `rails db:migrate`.
-
-  *  Specify the `email` that you, as the administrator, will use to sign in. To do this, go to `seeds.rb` file and write your email next to `email=`.
+### Running the App
+    
+  * Run `rails db:create:all` and `rails db:migrate`.
     
   *  Run `rails db:seed` to populate the database with data found in `seed_posts.JSON`. This will do two things: populate the blog with some sample posts (which you can modify in `seed_posts.JSON`) and set you up as a user.
-    *  Note that **a password will be automatically generated for you and printed to the console**. You can use this to sign in the first time and then modify your password in `Edit Profile`.
+    *  Note that **a password will be automatically generated for you and printed to the console**. You can use this to sign in the first time and then modify your password in `Edit Profile` once signed in.
  
   *  Run `bin/dev` to start the Rails server and the TailwinCSS watcher as specified in `Procfile.dev`.
     
@@ -120,7 +127,7 @@ To get a local copy up and running follow these steps:
 
 - [ ] Implement Devise invitable to allow users by invitation only to collaborate on the blog
 - [ ] Implement 'Forgot your password?' (Devise mailer); user currently has to reseed the app with a different email and redeploy the application if in production
-- [ ] Use OpenAI's Chat Completions API for user to leverage text generation model to get help writing blog post
+- [X] Use OpenAI's Chat Completions API for user to leverage text generation model to get help writing blog post
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -155,8 +162,11 @@ To get a local copy up and running follow these steps:
   <img width="500" alt="Screenshot 2024-04-22 at 20 33 26" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/cac89325-5b43-4242-8da5-c8d0d1328205">
   <img width="500" alt="Screenshot 2024-04-22 at 20 28 43" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/730d4886-0533-47b0-92ae-9d00e43e26a9">
   <br />
+
+4. (DEVELOPMENT) If the user is creating a new blog post, the user can write down a prompt which will be sent to OpenAI's Chat API and a 250 word blog post based on that prompt, written in a playful tone of voice, will be returned.
    
-4. The user can modify email and password details.
+   
+6. The user can modify email and password details.
   <br />
   <img width="500" alt="Screenshot 2024-04-22 at 20 34 10" src="https://github.com/aliciademorauk/BlogPost-WebApp/assets/81619741/0f9c9500-35a3-4c71-8bda-181000c7ca14">
   <br />
