@@ -4,7 +4,7 @@
 
 <br />
 
-  <h3 align="center">Blog Web Application</h3>
+  <h3 align="center">Intelligent Blog Web Application</h3>
 
   <p align="center">
      ·
@@ -93,9 +93,9 @@
 
 ### Installation
 
-  * Clone this repository: `git clone https://github.com/aliciademorauk/BlogPost-WebApp`.
+  * Clone this repository: `git clone https://github.com/aliciademorauk/intelligent_blog`.
 
-  * Navigate to the repository: `cd BlogPost-WebApp`.
+  * Navigate to the repository: `cd intelligent_blog`.
     
   * Run `bundle install` to install all the Ruby gems.
     
@@ -123,7 +123,7 @@
 ## Roadmap
 
 - [ ] Implement Devise invitable to allow users by invitation only to collaborate on the blog
-- [ ] Implement 'Forgot your password?' (Devise mailer); user currently has to reseed the app with a different email and redeploy the application if in production
+- [ ] Implement 'Forgot your password?' (user has to reseed the app with a different email and redeploy the application if in production)
 - [X] Use OpenAI's Chat Completions API for user to leverage text generation model to get help writing blog post
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
